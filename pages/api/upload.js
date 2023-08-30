@@ -1,4 +1,6 @@
 import multiparty from "multiparty";
+import { isAdminRequest } from "./auth/[...nextauth]";
+import { mongooseConnect } from "@/lib/mongoose";
 const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
@@ -8,6 +10,8 @@ cloudinary.config({
 });
 
 export default async function handler(req, res) {
+  await mongooseConnect();
+  await isAdminRequest(req,res)
   const form = new multiparty.Form();
 
   const { fields, files } = await new Promise((resolve, reject) => {
