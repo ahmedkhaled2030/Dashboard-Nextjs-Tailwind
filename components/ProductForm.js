@@ -25,6 +25,7 @@ export default function ProductForm({
   const router = useRouter();
   useEffect(() => {
     axios.get('/api/categories').then(result => {
+      console.log('productProperties' ,productProperties)
       setCategories(result.data);
     })
   }, []);
@@ -43,9 +44,11 @@ export default function ProductForm({
     }
     setGoToProducts(true);
   }
+
   if (goToProducts) {
     router.push('/products');
   }
+
   async function uploadImages(ev) {
     const files = ev.target?.files;
     if (files?.length > 0) {
@@ -64,7 +67,9 @@ export default function ProductForm({
   function updateImagesOrder(images) {
     setImages(images);
   }
-  function setProductProp(propName,value) {
+  function setProductProp(propName, value) {
+    console.log('propName', propName)
+    console.log('value' ,value)
     setProductProperties(prev => {
       const newProductProps = {...prev};
       newProductProps[propName] = value;
@@ -73,12 +78,21 @@ export default function ProductForm({
   }
 
   const propertiesToFill = [];
+   
   if (categories.length > 0 && category) {
-    let catInfo = categories.find(({_id}) => _id === category);
+    
+    //HINT: categories.find(({_id}) => _id === category) =>  
+    //HINT: categories.find((category._id) => _id === category)
+    let catInfo = categories.find(({ _id }) => _id === category);
+    
     propertiesToFill.push(...catInfo.properties);
+    //HINT:  while(catInfo?.parent?._id) => if category have parent
     while(catInfo?.parent?._id) {
-      const parentCat = categories.find(({_id}) => _id === catInfo?.parent?._id);
+      const parentCat = categories.find(x => x._id === catInfo?.parent?._id);
+  
       propertiesToFill.push(...parentCat.properties);
+      //HINT:  in order not to loop many times that mean the new 
+      //HINT: catInfo not have parent so break the while loop
       catInfo = parentCat;
     }
   }
@@ -101,8 +115,9 @@ export default function ProductForm({
         </select>
         {propertiesToFill.length > 0 && propertiesToFill.map(p => (
           <div key={p.name} className="">
+            {/* //HINT: {p.name[0]?.toUpperCase()+p.name.substring(1)} IN order to make color => Color */}
             <label>{p.name[0]?.toUpperCase()+p.name.substring(1)}</label>
-            <div>
+            <div> 
               <select value={productProperties[p.name]}
                       onChange={ev =>
                         setProductProp(p.name,ev.target.value)
@@ -122,9 +137,10 @@ export default function ProductForm({
           <ReactSortable
             list={images}
             className="flex flex-wrap gap-1"
-            setList={updateImagesOrder}>
+          setList={updateImagesOrder}>
+          {/* HINT: !!images?.length => TO CONVERT number to boolean */}
             {!!images?.length && images.map(link => (
-              <div key={link} className="h-24 bg-white p-4 shadow-sm rounded-sm border border-gray-200">
+              <div key={link} className="h-24 bg-white p-2 shadow-sm rounded-sm border border-gray-300">
                 <img src={link} alt="" className="rounded-lg"/>
               </div>
             ))}

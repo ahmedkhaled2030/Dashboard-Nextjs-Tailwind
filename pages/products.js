@@ -18,7 +18,7 @@ const Products = () => {
         <thead>
           <tr>
             <td>Product name</td>
-            <td></td>
+            <td>control</td>
           </tr>
         </thead>
         <tbody>
