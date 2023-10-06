@@ -8,6 +8,7 @@ export default async function handle(req, res) {
 
   if (req.method === "POST") {
     const { email } = req.body;
+
     if (await Admin.findOne({ email })) {
       res.status(400).json({ message: "admin already exists!" });
     } else {
@@ -16,6 +17,7 @@ export default async function handle(req, res) {
   }
 
   if (req.method === "GET") {
+  
     res.json(await Admin.find());
   }
 
