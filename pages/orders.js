@@ -1,14 +1,17 @@
 import Layout from "@/components/Layout";
+import Spinner from "@/components/Spinner";
 import { prettyDate } from "@/lib/date";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const OrdersPage = () => {
   const [orders, setOrders] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(false)
   useEffect(() => {
+    setIsLoading(true)
     axios.get("/api/orders").then((response) => {
       setOrders(response.data);
+      setIsLoading(false)
     });
   }, []);
   return (
@@ -23,6 +26,17 @@ const OrdersPage = () => {
           </tr>
         </thead>
         <tbody>
+            {
+            isLoading && (
+              <tr>
+                <td colSpan={3}>
+                  <div className="py-4">
+                    <Spinner fullWidth={true} />
+                  </div>
+                </td>
+              </tr>
+            )
+          }
           {orders.length > 0 &&
             orders.map((order) => (
               <tr key={order._id}>
