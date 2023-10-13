@@ -1,4 +1,4 @@
-## Responsive Shopping Cart (NextJS) [DigitalNest]
+## Responsive Dashboard (NextJS) [DigitalNest]
 
 ## Features
 ✅ using Tailwindcss for giving some beautiful UI.<br />
