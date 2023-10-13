@@ -1,22 +1,23 @@
-## Responsive Shopping Cart (NestJS) [DigitalNest]
+## Responsive Shopping Cart (NextJS) [DigitalNest]
 
 ## Features
-✅ using Redux toolkit for state management for handling cart & Wishlist .<br />
-✅ using Styled-components for giving some beautiful UI.<br />
-✅ Filtering products in category page by size and color and sorting by price.<br />
-✅ On the product page, you can see the description of the product and reviews and if you're real buyer you can add review.<br />
-✅ On the cart page, you can modify your order and the your address data, make sure that is ok, and then go to checkout page.<br />
-✅ using stripe to handle payment methods and finish the order.<br />
-✅ stripe Webook Stripe a crucial part of handling real-time events and notifications <br />
-✅ using stripe coupons for making discounts on checkout page <br />
+✅ using Tailwindcss for giving some beautiful UI.<br />
+✅ Homepage with Statistics of orders & Revenue [Today - this week - this month].<br />
 ✅ using Axios to call APIs that are made from the backend.<br />
-✅ using Postman to make API for [Auth, User, Product, Cart, Order] and ensure that API is well doing.<br />
+✅ using next-auth for authentication solutions (Google, Facebook). <br />
+✅ using Cloudinary to handle image management .<br />
+✅ Manage categories and subcategories and handle properties for every category .<br />
+✅ Manage orders and sort them and use formats to handle dates.<br />
+✅ Manage admins page through adding & deleting Gmail accounts   .<br />
+✅ Manage Shipping Fees and Homepage banner through settings page   .<br />
+✅ using react-sweetalert for creating modal dialogs, alerts, or pop-up messages in applications .<br />
+✅ handling Image Sorting in add-product with react-sortablejs .<br />
 ✅ using next-reveal to handle app animation.<br />
-✅ using Heroicons for using icons<br />
-✅ using next-auth for authentication solutions (Google , Facebook)<br />
+✅ using Heroicons for using icons .<br />
+✅ using MongoDB Cloud (Atlas) to store data. <br />
 ✅ react-spinners to handle loading state .<br />
-✅ using Lodash's debounce function that helps to delay the execution of a search function until search word is ok <br />
-✅ Handling backend api's for [Auth, User, Product, Cart, Order] <br />
+✅ Handling backend API's for [Auth, User, Product, Cart, Order] <br />
+✅ using Postman to make API for [Auth, User, Product, Cart, Order] and ensure that API is well doing.<br />
 
 ## Skills 
 
