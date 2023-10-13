@@ -1,77 +1,58 @@
-## Responsive Shopping Cart (React -Strapi) [Oberlo]
+## Responsive Shopping Cart (NestJS) [DigitalNest]
 
 ## Features
-✅ using Redux toolkit for state management for handling cart and login.<br />
-✅ using Material Ui for giving some beautiful UI.<br />
-✅ using Swiper js for handling the slider of the landing page.<br />
+✅ using Redux toolkit for state management for handling cart & Wishlist .<br />
+✅ using Styled-components for giving some beautiful UI.<br />
 ✅ Filtering products in category page by size and color and sorting by price.<br />
-✅ On the product page, you can select the amount and color and see the description of the product.<br />
-✅ On the cart page, you can modify your order, make sure that is ok, and then go to checkout page.<br />
+✅ On the product page, you can see the description of the product and reviews and if you're real buyer you can add review.<br />
+✅ On the cart page, you can modify your order and the your address data, make sure that is ok, and then go to checkout page.<br />
 ✅ using stripe to handle payment methods and finish the order.<br />
-✅ using React router V6 to navigate between components.<br />
+✅ stripe Webook Stripe a crucial part of handling real-time events and notifications <br />
+✅ using stripe coupons for making discounts on checkout page <br />
 ✅ using Axios to call APIs that are made from the backend.<br />
-✅ using redux-persist to save the data of the user at every refresh.<br />
 ✅ using Postman to make API for [Auth, User, Product, Cart, Order] and ensure that API is well doing.<br />
-✅ ability to use Starpi CMS to  make a relations between collections in DB and CRUD operations for any product , categories and sub-categories.<br />
-✅ using Framer motion to handle app animation.<br />
-✅ using Material UI for using icons ,skeleton , toasters and some animations.<br />
+✅ using next-reveal to handle app animation.<br />
+✅ using Heroicons for using icons<br />
+✅ using next-auth for authentication solutions (Google , Facebook)<br />
+✅ react-spinners to handle loading state .<br />
+✅ using Lodash's debounce function that helps to delay the execution of a search function until search word is ok <br />
+✅ Handling backend api's for [Auth, User, Product, Cart, Order] <br />
 
-## Skills
+## Skills 
 
-🚀 React<br />
-🚀 Redux Toolkit<br />
-🚀 React Router V6<br />
-🚀 Framer motion<br />
-🚀 Redux Persist<br />
-🚀 Axios<br />
-🚀 Swiper js<br />
-🚀 Material UI<br />
-🚀 Node.js<br />
-🚀 Express<br />
-🚀 Strapi<br />
+🚀 Next js<br />
+🚀 mongoose , MongoDB Cloud<br />
+🚀 next-auth<br />
+🚀 next-reveal<br />
+🚀 react-spinners<br />
+🚀 stripe<br />
+🚀 styled-components<br />
 🚀 Postman<br />
+🚀 Debounce Technique<br />
+
 
 
 
 
 ## Desktop imgs
-![React-App](https://user-images.githubusercontent.com/113113701/210123726-b69fe627-a100-426b-8d99-e3ba8b84846d.jpg)
-![2](https://user-images.githubusercontent.com/113113701/210124261-2c917e85-16c5-49bc-b42b-b3d32772bb17.jpg)
-![3](https://user-images.githubusercontent.com/113113701/210124236-16e49b83-93ff-4935-b46b-11b7a4477c84.jpg)
-![4](https://user-images.githubusercontent.com/113113701/210124239-d9f9d322-cece-4d91-b828-4e91f43cb669.jpg)
-![5](https://user-images.githubusercontent.com/113113701/210124241-c045ed74-36c4-468a-9fca-f2264764f6b5.jpg)
-![6](https://user-images.githubusercontent.com/113113701/210124281-ad117e81-edda-4bf8-9b90-209e94ca2e4b.jpg)
-## Responsive imgs
-![7](https://user-images.githubusercontent.com/113113701/210124332-31f5843b-2b48-4b90-8539-3499fb7ffd8d.jpg)
-![8](https://user-images.githubusercontent.com/113113701/210124333-91286e98-2086-4252-936a-b179e96e2466.jpg)
-![9](https://user-images.githubusercontent.com/113113701/210124334-afa20aad-089b-4ac7-8e8d-446c4331375c.jpg)
-![10](https://user-images.githubusercontent.com/113113701/210124335-8e076a6e-da6a-4fed-8a35-a5fd2b86e509.jpg)
-
+![1](https://github.com/ahmedkhaled2030/Dashboard-Nextjs-Tailwind/assets/113113701/4b074f65-1516-40ba-a3ec-56693f40f44b)
+![2](https://github.com/ahmedkhaled2030/Dashboard-Nextjs-Tailwind/assets/113113701/b4fc0380-9fd8-4a6e-b8bc-bf9ec51b6196)
+![3](https://github.com/ahmedkhaled2030/Dashboard-Nextjs-Tailwind/assets/113113701/27bcf6ed-8dde-41d3-ae41-525c2c5f74d4)
+![4](https://github.com/ahmedkhaled2030/Dashboard-Nextjs-Tailwind/assets/113113701/53498440-4f1c-4096-9a3a-e05354ec6949)
+![5](https://github.com/ahmedkhaled2030/Dashboard-Nextjs-Tailwind/assets/113113701/cead4cd2-cbee-4b89-97d7-ccaf715d5e3c)
+![7](https://github.com/ahmedkhaled2030/Dashboard-Nextjs-Tailwind/assets/113113701/7d432264-8300-458f-8541-c320e63c5ae7)
+![8](https://github.com/ahmedkhaled2030/Dashboard-Nextjs-Tailwind/assets/113113701/b2aa228d-a35e-4b5a-9b83-5bbb4e97eef9)
+![9](https://github.com/ahmedkhaled2030/Dashboard-Nextjs-Tailwind/assets/113113701/ed6b5a00-5441-458a-be17-c711e00c48e1)
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
